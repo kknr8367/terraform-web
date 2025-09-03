@@ -2,7 +2,7 @@ resource "aws_instance" "web_server_1" {
   ami           = "ami-00ca32bbc84273381"
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.public_subnet1.id 
-  key_name      = "k8s.pem" 
+  #key_name      = "k8s.pem" 
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   associate_public_ip_address = true
 
@@ -42,7 +42,7 @@ resource "aws_instance" "web_server_2" {
   ami           = "ami-00ca32bbc84273381"
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.public_subnet2.id 
-  key_name      = "k8s.pem" 
+  #key_name      = "k8s.pem" 
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   associate_public_ip_address = true
 
